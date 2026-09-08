@@ -8,7 +8,7 @@ model=joblib.load(Settings.MODEL_PATH)
 
 
 def predict_car_price(data:dict):
-    cached_key= " ".join([str(val) for val in data.values])
+    cached_key= " ".join([str(val) for val in data.values()])
     cached=get_cached_prediction(cached_key)
     if cached:
         return cached
